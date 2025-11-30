@@ -9,6 +9,7 @@
 #include "V8.h"
 #include "Time.h"
 #include "Window.h"
+#include "SceneManager.h"
 #include "../ecs/EcsManager.h"
 
 void V8::sdl() {
@@ -55,4 +56,5 @@ void V8::shutdown() {
     delete Time::getInstance();
     delete Window::getInstance();
     delete EcsManager::getInstance();
+    delete SceneManager::getInstance();
 }
