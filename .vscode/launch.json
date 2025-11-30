@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [ 
+        {
+            "name": "Build and debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/engine",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "targetArchitecture": "arm64",
+            "preLaunchTask": "build"
+        }
+    ]
+}
