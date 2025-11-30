@@ -54,10 +54,6 @@
 #define SHADER_FOLDER "./data/shaders/"
 #define SHADER_FOLDER_BINARY "./data/bin/"
 
-/**
- * @brief The Defs class contains all the constants used in the Dodoi-Engine.
- * @version 1.0.0
- */
 class Def final {
 public:
     inline static const char NAME[] = "Dodoi Engine v.0.0.0-macOS";
