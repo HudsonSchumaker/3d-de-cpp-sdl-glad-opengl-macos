@@ -7,3 +7,7 @@
 * @copyright Copyright (c) 2024, Dodoi-Lab
 */
 #include "Vbo.h"
+
+Vbo::Vbo() {
+    glGenBuffers(1, &id);
+}

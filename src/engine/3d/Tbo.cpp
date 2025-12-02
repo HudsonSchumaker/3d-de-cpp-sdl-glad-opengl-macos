@@ -23,3 +23,7 @@ void Tbo::bind() const {
 void Tbo::unbind() const {
     glBindTexture(GL_TEXTURE_BUFFER, 0);
 }
+
+GLuint Tbo::getId() const {
+    return id;
+}

@@ -23,3 +23,7 @@ void Vao::bind() const {
 void Vao::unbind() const {
     glBindVertexArray(0);
 }
+
+GLuint Vao::getId() const {
+    return id;
+}
