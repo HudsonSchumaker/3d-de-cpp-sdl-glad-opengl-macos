@@ -10,6 +10,7 @@
 #include "Pch.h"
 #include "engine/core/V8.h"
 #include "engine/core/Time.h"
+#include "engine/3d/Shader.h"
 #include "engine/core/Window.h"
 
 void quit();
@@ -20,6 +21,13 @@ int main(int argc, char* argv[]) {
     setUp(args(argc, argv));
   
     Time* time = Time::getInstance();
+
+
+    Shader v = Shader(VERTEX_DEFAULT, ShaderType::VERTEX);
+    v.compile();
+
+    Shader f = Shader(FRAGMENT_DEFAULT, ShaderType::FRAGMENT);
+    f.compile();
 
     bool running = true;
     while (running) {
