@@ -21,8 +21,6 @@ int main(int argc, char* argv[]) {
     setUp(args(argc, argv));
   
     Time* time = Time::getInstance();
-
-
     Shader v = Shader(VERTEX_DEFAULT, ShaderType::VERTEX);
     v.compile();
 
