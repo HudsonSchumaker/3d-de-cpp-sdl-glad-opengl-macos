@@ -30,22 +30,20 @@ Shader::~Shader() {
 }
 
 bool Shader::compile() {
-    bool success = true;
     glShaderSource(id, 1, &src, nullptr);
     glCompileShader(id);
 
-    GLint compiled;
-    glGetShaderiv(id, GL_COMPILE_STATUS, &compiled);
-    if (!compiled) {
-        success = false;
-
+    GLint success;
+    glGetShaderiv(id, GL_COMPILE_STATUS, &success);
+    if (!success) {
         GLint length;
         glGetShaderiv(id, GL_INFO_LOG_LENGTH, &length);
         std::vector<GLchar> infoLog(length);
-        glGetShaderInfoLog(id, 512, nullptr, infoLog.data());
+        glGetShaderInfoLog(id, length, nullptr, infoLog.data());
         std::cerr << "Shader compilation failed: " << infoLog.data() << std::endl;
+        return false;
     }
-    return success;
+    return true;
 }
 
 GLuint Shader::getId() const {
