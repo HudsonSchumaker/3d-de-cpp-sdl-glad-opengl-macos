@@ -8,3 +8,13 @@
 */
 #pragma once
 #include "../../Pch.h"
+
+class Matrix3 final {
+public:
+    float m[3][3];  // 3x3 matrix stored in column-major order
+
+    Matrix3();
+    static Matrix3 identity();
+    void toArray(float* out) const;
+
+};
