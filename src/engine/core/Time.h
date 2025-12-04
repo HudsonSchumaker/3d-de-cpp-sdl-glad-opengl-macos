@@ -14,7 +14,7 @@ public:
     inline static Time* instance = nullptr;
     static Time* getInstance();
 
-    void update();
+    float update();
     float getDeltaTime() const;
     float getElapsedTime() const;
     float getFPS() const;

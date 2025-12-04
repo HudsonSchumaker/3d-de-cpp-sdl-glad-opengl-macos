@@ -15,7 +15,7 @@ Time* Time::getInstance() {
     return instance;
 }
 
-void Time::update() {
+float Time::update() {
     double frameStart = SDL_GetTicks64() / 1000.0;
     const double targetFrameTime = Def::TARGET_FRAME_TIME;
 
@@ -32,6 +32,8 @@ void Time::update() {
 
     fps = (deltaTime > 0.0f) ? (1.0f / deltaTime) : 0.0f;
     currentTime += deltaTime;
+    
+    return deltaTime;
 }
 
 float Time::getDeltaTime() const {
