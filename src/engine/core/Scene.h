@@ -39,10 +39,12 @@ public:
     virtual ~Scene() {}
     virtual short run() = 0;
 
-    void updateDeltaTime();
+    float updateDeltaTime();
+
     void setIsLoaded(bool loaded);
     void loadAsync();
     void waitForLoad();
     bool getIsLoaded() const;
+    
     const std::string& getNextSceneName() const;
 };

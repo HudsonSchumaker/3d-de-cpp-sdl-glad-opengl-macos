@@ -13,8 +13,8 @@ void Scene::loadAsync() {
     loadFuture = std::async(std::launch::async, &Scene::load, this);
 }
 
-void Scene::updateDeltaTime() {
-    time->update();
+float Scene::updateDeltaTime() {
+    return time->update();
 }
 
 void Scene::waitForLoad() {
