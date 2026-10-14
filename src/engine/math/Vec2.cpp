@@ -27,7 +27,7 @@ Vec2 Vec2::normalized() const {
 
 Vec2& Vec2::normalize() {
     float mag = magnitude();
-    if (mag > 0.0f){
+    if (mag > 0.0f) {
         x /= mag;
         y /= mag;
     }
